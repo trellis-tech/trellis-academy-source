@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Trellis Academy</title>
+  <desc id="description">Trellis Academy learning platform</desc>
+  <rect width="1200" height="630" fill="#f7f8f7"/>
+  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#ffffff" stroke="#dfe4e1" stroke-width="2"/>
+  <rect x="136" y="217" width="88" height="88" rx="16" fill="#0f766e"/>
+  <path d="M158 242h44M158 258h44M158 274h28" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="8"/>
+  <text x="264" y="266" fill="#17201d" font-family="Arial, sans-serif" font-size="54" font-weight="600">Trellis Academy</text>
+  <text x="264" y="322" fill="#66736e" font-family="Arial, sans-serif" font-size="28">Practical learning for hospitality teams</text>
+</svg>

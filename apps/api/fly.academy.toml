@@ -1,0 +1,52 @@
+app = "trellis-academy-api"
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  LEARNHOUSE_ALLOWED_ORIGINS = "https://academy.trellistech.com"
+  LEARNHOUSE_CONTACT_EMAIL = "michel@trellistech.com"
+  LEARNHOUSE_CONTENT_DELIVERY_TYPE = "filesystem"
+  LEARNHOUSE_DEVELOPMENT_MODE = "false"
+  LEARNHOUSE_DISABLE_EE = "true"
+  LEARNHOUSE_DOMAIN = "academy.trellistech.com"
+  LEARNHOUSE_ENV = "prod"
+  LEARNHOUSE_FRONTEND_DOMAIN = "academy.trellistech.com"
+  LEARNHOUSE_HOST = "0.0.0.0"
+  LEARNHOUSE_PORT = "9000"
+  LEARNHOUSE_SAAS = "false"
+  LEARNHOUSE_SELF_HOSTED = "true"
+  LEARNHOUSE_SITE_DESCRIPTION = "Training and product education for Trellis"
+  LEARNHOUSE_SITE_NAME = "Trellis Academy"
+  LEARNHOUSE_SSL = "true"
+  LEARNHOUSE_TENANCY = "single"
+  LEARNHOUSE_USE_DEFAULT_ORG = "true"
+  TRELLIS_ACADEMY_ALLOWED_EMAILS = "michel@trellistech.com"
+  TRELLIS_ACADEMY_ORG_SLUG = "default"
+  TRELLIS_ACADEMY_RUNTIME = "1"
+  TRELLIS_APP_URL = "https://app.trellistech.com"
+
+[http_service]
+  internal_port = 9000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [[http_service.checks]]
+    grace_period = "45s"
+    interval = "30s"
+    method = "GET"
+    path = "/api/v1/health"
+    timeout = "10s"
+
+[[mounts]]
+  source = "academy_content"
+  destination = "/app/content"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1gb"

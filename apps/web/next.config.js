@@ -1,0 +1,130 @@
+const { withSentryConfig } = require("@sentry/nextjs");
+
+function academyMediaRemotePatterns() {
+  const configuredUrl = process.env.NEXT_PUBLIC_LEARNHOUSE_MEDIA_URL
+  if (!configuredUrl) return []
+
+  const mediaUrl = new URL(configuredUrl)
+  if (mediaUrl.protocol !== 'http:' && mediaUrl.protocol !== 'https:') {
+    throw new Error('NEXT_PUBLIC_LEARNHOUSE_MEDIA_URL must use http or https')
+  }
+  const basePath = mediaUrl.pathname.replace(/\/$/, '')
+  return [{
+    protocol: mediaUrl.protocol.slice(0, -1),
+    hostname: mediaUrl.hostname,
+    port: mediaUrl.port,
+    pathname: `${basePath}/**`,
+  }]
+}
+
+/** @type {import('common.next').NextConfig} */
+const nextConfig = {
+  // Keep the vendored Academy build independent from lockfiles in the Trellis
+  // monorepo or a developer's parent directory.
+  turbopack: {
+    root: __dirname,
+  },
+  poweredByHeader: false,
+  async headers() {
+    return [
+      // Global security headers on every route — clickjacking (X-Frame-Options /
+      // frame-ancestors), MIME sniffing, referrer leakage and HSTS.
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'none'" },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          { key: 'X-Download-Options', value: 'noopen' },
+        ],
+      },
+    ]
+  },
+  reactStrictMode: false,
+  output: 'standalone',
+  images: {
+    remotePatterns: academyMediaRemotePatterns(),
+  },
+  experimental: {
+    optimizePackageImports: [
+      '@phosphor-icons/react',
+      'framer-motion',
+      'lucide-react',
+      '@emoji-mart/react',
+      '@emoji-mart/data',
+      'dayjs',
+      'highlight.js',
+      'recharts',
+      '@radix-ui/react-icons',
+      '@hello-pangea/dnd',
+      'react-i18next',
+      '@tiptap/core',
+      '@tiptap/react',
+      '@tiptap/starter-kit',
+      '@tiptap/extension-table',
+      '@tiptap/extension-table-cell',
+      '@tiptap/extension-table-header',
+      '@tiptap/extension-table-row',
+      '@tiptap/extension-youtube',
+      '@tiptap/extension-link',
+      '@tiptap/extension-placeholder',
+      '@tiptap/extension-code-block-lowlight',
+      '@tiptap/extension-heading',
+      '@tiptap/extension-bullet-list',
+      '@tiptap/extension-ordered-list',
+      '@tiptap/extension-list-item',
+      '@tiptap/extension-collaboration',
+      '@tiptap/extension-collaboration-caret',
+      '@uiw/react-codemirror',
+      'lowlight',
+      'katex',
+      'react-katex',
+    ],
+  },
+  // Ensure consistent build IDs across multiple pods in Kubernetes
+  generateBuildId: async () => {
+    return process.env.TRELLIS_ACADEMY_RELEASE_SHA
+      || process.env.VERCEL_GIT_COMMIT_SHA
+      || 'trellis-academy-development'
+  },
+}
+
+// Generate runtime config for development
+if (process.env.NODE_ENV === 'development') {
+  const fs = require('fs')
+  const path = require('path')
+  const runtimeConfig = {}
+
+  Object.keys(process.env).forEach((key) => {
+    if (key.startsWith('NEXT_PUBLIC_')) {
+      runtimeConfig[key] = process.env[key]
+    }
+  })
+
+  const publicDir = path.join(__dirname, 'public')
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
+
+  fs.writeFileSync(
+    path.join(publicDir, 'runtime-config.js'),
+    `window.__RUNTIME_CONFIG__ = ${JSON.stringify(runtimeConfig)};`,
+    'utf8'
+  )
+}
+
+// Always wrap with Sentry — DSN is resolved at runtime, not build time
+module.exports = withSentryConfig(nextConfig, {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  silent: true,
+  tunnelRoute: "/monitoring",
+  sourcemaps: {
+    disable: !process.env.SENTRY_ORG || !process.env.SENTRY_PROJECT,
+  },
+  bundleSizeOptimizations: {
+    excludeDebugStatements: true,
+    excludeReplayIframe: true,
+    excludeReplayShadowDom: true,
+  },
+});

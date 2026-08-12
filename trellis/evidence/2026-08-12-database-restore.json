@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "status": "succeeded",
+  "source": {
+    "provider": "Supabase",
+    "projectRef": "rewmkcsfjgigozogkwsn",
+    "backupId": "1354597470",
+    "backupInsertedAt": "2026-08-12T12:29:37.424Z",
+    "physical": true,
+    "walG": true,
+    "pitr": false,
+    "logicalSnapshotAt": "2026-08-12T16:56:33Z",
+    "logicalSnapshotBytes": 229296,
+    "logicalSnapshotSha256": "e090b5b213f556fb93624905effbea3cd5fe6a7afb25fa6144b3d1e0be0ef782"
+  },
+  "rehearsalPreparation": {
+    "kind": "isolated local source restored from the production public schema",
+    "startingMigrationHead": "t3r4e5l6s7s8",
+    "targetMigrationHead": "u4v5w6x7y8z9",
+    "schemaRevision": "2a92b903963fbca8b2ea147f3184c9f739b79309",
+    "fixtures": "synthetic protected learner and publication records only",
+    "productionWrites": 0,
+    "destroyedAfterBackup": true
+  },
+  "artifact": {
+    "format": "pg_dump custom",
+    "bytes": 232687,
+    "sha256": "b653264764cc5e9b4beb4819a67dfcbb82005412016d4c73db4fde2bd3d5b5d0",
+    "scope": "current-head public schema with synthetic protected records",
+    "destroyedAfterVerification": true
+  },
+  "target": {
+    "kind": "second isolated local Supabase database",
+    "name": "academy_restore_target_20260812",
+    "destroyedAfterVerification": true
+  },
+  "readback": {
+    "alembicHead": "u4v5w6x7y8z9",
+    "organizations": 1,
+    "users": 2,
+    "trellisIdentities": 1,
+    "courses": 1,
+    "chapters": 1,
+    "activities": 1,
+    "trailRuns": 1,
+    "trailSteps": 1,
+    "assignmentSubmissions": 1,
+    "assignmentGrades": 1,
+    "certificates": 1,
+    "publicationReceipts": 1,
+    "mediaObjectsExpected": 0,
+    "protectedRecordsDigest": "5df689ef1e7f90969ba81e313adcd537eed6a42c176bebe18ef1b57f421cf2eb"
+  },
+  "startedAt": "2026-08-12T16:56:33Z",
+  "completedAt": "2026-08-12T17:00:39Z",
+  "operator": "Codex",
+  "containsCredentials": false,
+  "containsLearnerData": false
+}

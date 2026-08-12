@@ -1,0 +1,27 @@
+{
+  "upstreamRepository": "https://github.com/learnhouse/learnhouse.git",
+  "upstreamDefaultBranch": "dev",
+  "upstreamRevision": "f18d05be5991917a4e870a8ba15985567beaada3",
+  "upstreamVerifiedAt": "2026-08-11",
+  "importDate": "2026-08-11",
+  "license": "AGPL-3.0",
+  "upstreamArchive": {
+    "prefix": "learnhouse-f18d05be5991917a4e870a8ba15985567beaada3/",
+    "sha256": "6e2c4709b76a07e0f570674d374a3a2b8e1e3b68cbf1a1b465c249c4b507069b",
+    "sizeBytes": 55818240
+  },
+  "compatibilityPatch": {
+    "sha256": "e90dc0046cbc44d9d3c8ccbc1842524b7b0bf25d696c6ff3319807ff6ff815de",
+    "summary": "Remove community imports of excluded commercial web modules and repair the stale catalog pagination test import."
+  },
+  "excludedBinaryAssets": {
+    "count": 54,
+    "reason": "Upstream LearnHouse branding, documentation screenshots, favicons, and one assignment fixture are excluded from the reviewable Phase 3 source baseline; Phase 4 owns Trellis Academy branding and deployment assets."
+  },
+  "excludedPaths": [
+    "apps/web/ee",
+    "docs",
+    "apps/e2e/features/scorm"
+  ],
+  "sourceManifest": "trellis/source-manifest.sha256"
+}

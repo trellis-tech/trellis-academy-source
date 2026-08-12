@@ -1,0 +1,42 @@
+{
+  "activities": {
+    "assignment": "Assignment",
+    "autosave_blocked": "Can't be saved yet",
+    "autosave_retry": "Couldn't save — retrying…",
+    "autosave_unsaved": "Unsaved changes",
+    "autosaved": "Saved",
+    "autosaving": "Saving…",
+    "code": "Code",
+    "file_submission": "File Submission",
+    "form": "Form",
+    "quiz": "Quiz",
+    "save_answers": "Save answers",
+    "teacher_view": "Teacher view"
+  },
+  "assignments": {
+    "assignment_description": "Assignment Description",
+    "attempt_count": "Attempt {{current}}",
+    "attempt_count_bounded": "Attempt {{current}} of {{max}}",
+    "due_date": "Due Date",
+    "grade": "Grade",
+    "hint": "Hint",
+    "past_due_description": "This assignment was due on {{date}}. Answers can no longer be saved or submitted for grading.",
+    "past_due_title": "Deadline passed",
+    "points": "points",
+    "quick_grade": {
+      "full": "Full",
+      "half": "Half",
+      "zero": "Zero"
+    },
+    "reference_document": "Reference Document",
+    "run_autograde": "Run Auto-grade",
+    "score": "score",
+    "task": "Task",
+    "task_feedback_placeholder": "Note for this task (saved with grade)",
+    "task_not_passed": "Not passed",
+    "task_passed": "Passed"
+  },
+  "common": {
+    "save": "Save"
+  }
+}

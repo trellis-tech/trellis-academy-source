@@ -1,0 +1,47 @@
+version: 1
+academy:
+  id: trellis-academy
+  title: Trellis Academy
+  catalog:
+    - platform-readiness
+courses:
+  - id: platform-readiness
+    status: published
+    locales:
+      en:
+        title: Platform readiness fixture
+        summary: Synthetic proof for the Academy publishing lifecycle.
+    modules:
+      - platform-readiness-module
+modules:
+  - id: platform-readiness-module
+    courseId: platform-readiness
+    order: 1
+    locales:
+      en:
+        title: Platform readiness module
+    lessons:
+      - platform-readiness-check
+lessons:
+  - id: platform-readiness-check
+    moduleId: platform-readiness-module
+    order: 1
+    type: assessment
+    locales:
+      en:
+        title: Platform readiness check
+    assessmentId: platform-readiness-quiz
+assessments:
+  - id: platform-readiness-quiz
+    lessonId: platform-readiness-check
+    kind: quiz
+    locales:
+      en:
+        prompt: Is this synthetic content safe to remove?
+        options:
+          - id: yes
+            label: Yes
+            correct: true
+          - id: no
+            label: No
+            correct: false
