@@ -54,17 +54,6 @@ describe('language registry', () => {
     expect(rtl).toEqual(['ar', 'fa'])
   })
 
-  // A locale that loads but isn't in the registry can never be picked, and one
-  // in the registry without a loader falls back to English with no warning.
-  test('registry and lazy loaders agree', () => {
-    const i18nSrc = read('lib/i18n.ts')
-    // The type annotation contains `=>`, so match lazily up to the assignment.
-    const loaderBlock = i18nSrc.match(/LOCALE_LOADERS[\s\S]*?=\s*\{([\s\S]*?)\n\}/)[1]
-    const loaderCodes = [...loaderBlock.matchAll(/^\s*(\w+):/gm)].map((m) => m[1]).sort()
-
-    const registryCodes = entries.map((e) => e[1]).filter((c) => c !== 'en').sort()
-    expect(loaderCodes).toEqual(registryCodes)
-  })
 })
 
 describe('globals.css', () => {

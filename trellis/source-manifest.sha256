@@ -1896,7 +1896,7 @@ c7bc0c7030cdff5eec0dc0c59bc559a871b4c8422db513bc5b83e2fbf770afd1  apps/web/tests
 a51cf4271a4b22a9ea4f23c0882f507093f8362181943d8cfcc1613eba2edad0  apps/web/tests/catalog-pagination.test.mjs
 cef24f376d49db52b8ec3156cb64560e768782cfb198a2b33a4c1155e1ccac38  apps/web/tests/course-structure-translatable-text.test.mjs
 9dcc9629ac38fd8873a65f1cad979aff23772e71d41ad9903b8b37e1c7718658  apps/web/tests/editor-unsaved-changes.test.mjs
-03e87a0d8819a67d5c844f653f13a69d80aad329013596c63e68fa63659e945f  apps/web/tests/rtl-guard.test.mjs
+cb92961ea83fbc06602e029022a158b0a0dbba9db96cd80909fb32a56cfb3b2f  apps/web/tests/rtl-guard.test.mjs
 260b46af899db070e04623531343b1c56a780dfd3ee24c5cdbfbfb82513ea0e1  apps/web/tests/trellis-sso-web.test.mjs
 50b552051be3330ae8689f5ed3a68bde1b4cedbb497636c0346ba2eeb30895cb  apps/web/tests/video-source.test.mjs
 c77a5ff4a29112df1c4f6710c64b88e54690cbd4475580a5de29053b5b14621d  apps/web/tsconfig.json
