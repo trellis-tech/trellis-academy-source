@@ -51,9 +51,11 @@ test('Trellis user exchanges a single-use assertion, keeps the course deep link,
       `/course/${escapeRegExp(fixture.courseUuid)}/activity/${escapeRegExp(fixture.activityUuid)}`
     )
   )
+  await expect(page.getByText('Assignment', { exact: true }).first()).toBeVisible({
+    timeout: 20_000,
+  })
 
   const assignment = new AssignmentPage(page)
-  await assignment.open(fixture.courseUuid, fixture.activityUuid)
   await assignment.answerQuiz('A')
   await assignment.saveProgress()
   await page.reload()

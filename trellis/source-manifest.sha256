@@ -983,7 +983,7 @@ d9dd8a3096c692b63db7dfb101df6004ab782ad8da70ab87d44f8a07e6889a4e  apps/e2e/featu
 b80f6a600da0e3a1a6142e98b00d5fb18d6fa8f5f59fd5d7a0c3d9cbf4b2a0ae  apps/e2e/features/rtl/tests/01-dir-on-first-paint.spec.ts
 77547da511fca18b94a247d64793fb56b73190536f8c079c9ff39fd893b9ca34  apps/e2e/features/rtl/tests/02-no-horizontal-overflow.spec.ts
 ff542f6afc3addabf29e51384dd97e666084ade02eb8b323859c64f15c2c8130  apps/e2e/features/rtl/tests/03-language-switch.spec.ts
-c409f0f606fd43e347c3132dcad1caf05d1ea346310bf6f31be5a170c2392031  apps/e2e/features/trellis-sso/tests/01-learner-journey.spec.ts
+e6db723e5c26aee7e679b38b49859e386ea4e052821daaabfeec5c432b4f1114  apps/e2e/features/trellis-sso/tests/01-learner-journey.spec.ts
 230d1fed72c30454254c1562b0143e26ac8319d913f046cf9b694ea9dd7168ac  apps/e2e/features/trellis-sso/tests/02-denials.spec.ts
 58244101b3344f893171722799a81c52fff434eee69e28adacb4254953697f5a  apps/e2e/fixtures/publish-academy-fixture.mjs
 ca54db45b9379b3137f3cda0f28177bf4e9e3724981cfca998cc1bd089036469  apps/e2e/fixtures/read-learning-rows.py
