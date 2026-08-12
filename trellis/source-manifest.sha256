@@ -995,8 +995,6 @@ f376256e0fba318ccff8c3734cccc9b22c0791e1c7984439ae493d21efc3a107  apps/e2e/READM
 4f69896e461b86c6c951b9316f9ee3ef8857b753f688629340ef3452cab273ff  apps/e2e/tsconfig.json
 71730fd9e1ca2ed6a250c063c6bf021fd56fecb2f67dae01f40547f39d2abdaf  apps/web/.gitignore
 7bca8c0e0d0e2151c579953650f8ba9b3875bf082d33ab1f0a1b6daaf1396fbf  apps/web/.prettierrc.yaml
-5e411af2888c9087109ef3293437ca794daef40d7db2d8073d50aff9327ebbbc  apps/web/.vercel/project.json
-f5d1ed0f5032ae128931f46459b5faa1af6319fc2dfb3e7a5fe54a84bf93dbd6  apps/web/.vercel/README.txt
 6c5b7e7d76418d083ff7ea1b078c3686b808475d0d36aeb45ce354a6339bb626  apps/web/app/(hub)/_billing/plans.ts
 dce0a364f5109d0e503c14f409f475343edb68391ef72f45bfe0c73f7bb24021  apps/web/app/(hub)/account/_lib/deleteUser.ts
 9d50bd068fc522a62773d2a8556ba1b6ef5c58ded61f92af632654aa72fd042b  apps/web/app/(hub)/billing/_components/BillingSummary.tsx
