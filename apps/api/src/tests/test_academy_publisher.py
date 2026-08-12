@@ -18,6 +18,11 @@ from src.academy.publisher import (
     _canonical_digest,
     rollback_academy_release,
 )
+from src.db.academy_publications import AcademyPublication
+from src.db.courses.activities import Activity
+from src.db.courses.assignments import Assignment, AssignmentTask, AssignmentTaskSubmission
+from src.db.courses.chapters import Chapter
+from src.db.courses.courses import Course
 
 
 def test_canonical_digest_matches_utf8_json_for_localized_content() -> None:
@@ -49,11 +54,6 @@ async def test_publication_lock_uses_a_postgres_transaction_advisory_lock() -> N
     statement, parameters = session.execute.await_args.args
     assert str(statement) == "SELECT pg_advisory_xact_lock(:lock_key)"
     assert parameters == {"lock_key": PUBLICATION_LOCK_KEY}
-from src.db.academy_publications import AcademyPublication
-from src.db.courses.activities import Activity
-from src.db.courses.assignments import Assignment, AssignmentTask, AssignmentTaskSubmission
-from src.db.courses.chapters import Chapter
-from src.db.courses.courses import Course
 
 
 def _request(secret: str) -> Request:
