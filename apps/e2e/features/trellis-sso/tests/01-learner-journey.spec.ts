@@ -53,6 +53,7 @@ test('Trellis user exchanges a single-use assertion, keeps the course deep link,
   )
 
   const assignment = new AssignmentPage(page)
+  await assignment.open(fixture.courseUuid, fixture.activityUuid)
   await assignment.answerQuiz('A')
   await assignment.saveProgress()
   await page.reload()

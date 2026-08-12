@@ -15,12 +15,24 @@
 import { Page, Locator, expect } from '@playwright/test'
 import { BASE_URL } from '../../../core/instance'
 
+const ACTIVITY_ROUTE_ATTEMPTS = 3
+
 export class AssignmentPage {
   constructor(private readonly page: Page) {}
 
   /** Open the student activity view. Pass bare UUIDs (no course_/activity_ prefix). */
   async open(bareCourseUuid: string, bareActivityUuid: string): Promise<void> {
-    await this.page.goto(`${BASE_URL}/course/${bareCourseUuid}/activity/${bareActivityUuid}`)
+    const url = `${BASE_URL}/course/${bareCourseUuid}/activity/${bareActivityUuid}`
+    for (let attempt = 1; attempt <= ACTIVITY_ROUTE_ATTEMPTS; attempt++) {
+      const response = await this.page.goto(url)
+      if (response?.status() !== 404) break
+      if (attempt === ACTIVITY_ROUTE_ATTEMPTS) {
+        throw new Error(
+          `Academy activity route remained unavailable after ${ACTIVITY_ROUTE_ATTEMPTS} attempts`
+        )
+      }
+      await this.page.waitForTimeout(attempt * 500)
+    }
     await expect(this.page.getByText('Assignment', { exact: true }).first()).toBeVisible({
       timeout: 20_000,
     })

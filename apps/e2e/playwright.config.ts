@@ -19,14 +19,17 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
+  // This serial journey intentionally shares seeded learning state across tests.
+  // Retrying one test without rerunning global setup would reuse partially
+  // mutated state and produce a misleading result.
+  retries: 0,
   reporter: [
     ['list'],
     ['html', { open: 'never', outputFolder: 'playwright-report' }],
   ],
   use: {
     baseURL: BASE_URL,
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     actionTimeout: 15_000,
