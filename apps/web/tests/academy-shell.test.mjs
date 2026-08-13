@@ -209,6 +209,8 @@ describe('Trellis Academy shell', () => {
     expect(account).not.toContain('password')
     expect(account).not.toContain('purchases')
     expect(account).not.toContain('updateProfile')
+    expect(account).not.toContain('<Link className="inline-flex h-8 items-center gap-2 rounded-md bg-foreground')
+    expect(account).toContain('<a className="inline-flex h-8 items-center gap-2 rounded-md bg-foreground')
   })
 
   test('keeps progress and certificates read-only and Trellis styled', () => {

@@ -1042,7 +1042,7 @@ a866194ac1c209bd5f44f06a69ecc909323e584b9ba4bf84afe38602e0aad540  apps/web/app/e
 b92f443ebbf8297e7cb70de5dbd3150e3795813861d7ab34339493f4b135e82b  apps/web/app/home/home.tsx
 10e6fc2094546309b0a7e25760892d690abd7b5ebc42932cd9bff22ec6004e95  apps/web/app/layout.tsx
 e876924bdfe3cb518fbe34815fa27e773bfd6227c362283da9e9e3756a3d715e  apps/web/app/not-found.tsx
-3972951c4e60688b3908eba935bb518421e530723ea98139d7239294d16479f7  apps/web/app/orgs/[orgslug]/(withmenu)/account/[subpage]/page.tsx
+dfa0563a677486916a2bbea3a85ca6ff9b83594e5e706d96a9cea2981e9dc652  apps/web/app/orgs/[orgslug]/(withmenu)/account/[subpage]/page.tsx
 04bcc94ed22ce9809cbf6fa1a3d631d81028a2bf6a29497763dc44d264923ef5  apps/web/app/orgs/[orgslug]/(withmenu)/account/page.search.ts
 7d3a6a09798d449aa02e5e563ec042aa294b64b9bfd8776adc5b2c16f47f22ff  apps/web/app/orgs/[orgslug]/(withmenu)/account/page.tsx
 99915d3405a08d78ed56abf5e35ed6e78449c2e1d1cb8127bfb24a33fee303fa  apps/web/app/orgs/[orgslug]/(withmenu)/boards/boards.tsx
@@ -1887,7 +1887,7 @@ c16d1caf316d94ce9ca2b5f4094eb1ff80b1a422fcbb08b26868c1fa3ca98c6b  apps/web/servi
 13546d9e95c165480e199bec2af30dafb0ec34946c72d4e53b6f451cd8fd1a3c  apps/web/services/utils/ts/requests.ts
 ed4e9e66ed24e464a67daadfe497436bba114036921451e19a5cd9cce24c3d28  apps/web/services/webhooks/webhooks.ts
 2ab2aa3c4c57377ba72ccb0bad11fd8c3427eb72b77ce706914df948748067fb  apps/web/styles/globals.css
-cbadd8804d9b8ae0c98cd6d39fd2b69b23746f14c51d6e539f8135f47b77d7e4  apps/web/tests/academy-shell.test.mjs
+3a975479bd9e004fe3f473ce81e5c59a7bb2c5db3d8f531b1239ae1aa368c6ab  apps/web/tests/academy-shell.test.mjs
 c7bc0c7030cdff5eec0dc0c59bc559a871b4c8422db513bc5b83e2fbf770afd1  apps/web/tests/active-user-billing.test.mjs
 1181a585107c1898771e8e404fcdfa53d54a6e2a69240876d85224e8286a170e  apps/web/tests/admin-ee-gate.test.mjs
 710ca36edeba0d08f75734442758738d56c26afec0685b4763405d54bd405da9  apps/web/tests/api-response-shape.test.mjs

@@ -1,6 +1,5 @@
 import { ArrowSquareOut, IdentificationCard, ShieldCheck, SignOut } from '@phosphor-icons/react/dist/ssr'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 
 import { getAcademyServerSession } from '@/lib/auth/server'
@@ -61,10 +60,10 @@ export default async function AcademyAccountPage({
               <ArrowSquareOut aria-hidden="true" size={14} />
             </a>
           ) : null}
-          <Link className="inline-flex h-8 items-center gap-2 rounded-md bg-foreground px-3 text-xs font-medium text-background" href="/api/auth/trellis/logout">
+          <a className="inline-flex h-8 items-center gap-2 rounded-md bg-foreground px-3 text-xs font-medium text-background" href="/api/auth/trellis/logout">
             <SignOut aria-hidden="true" size={14} />
             Sign out
-          </Link>
+          </a>
         </div>
       </section>
     </div>
