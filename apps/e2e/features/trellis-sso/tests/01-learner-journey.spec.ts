@@ -36,7 +36,7 @@ test('Trellis user exchanges a single-use assertion, keeps the course deep link,
   await page.goto(`${BASE_URL}/owner`)
   await expect(page.getByRole('heading', { name: 'Publishing workspace' })).toBeVisible()
   await expect(page.getByText('Repository source', { exact: true })).toBeVisible()
-  await expect(page.getByText('Draft only', { exact: true })).toBeVisible()
+  await expect(page.getByText('Platform ready', { exact: true })).toBeVisible()
   await page.goto(`${BASE_URL}${fixture.destination}`)
 
   const startCourse = page.waitForResponse(
