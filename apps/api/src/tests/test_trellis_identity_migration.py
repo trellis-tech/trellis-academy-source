@@ -17,3 +17,11 @@ def test_trellis_identity_migration_is_in_the_single_head_chain() -> None:
     assert '"trellisidentity"' in source
     assert '"trellis_subject"' in source
     assert 'sa.ForeignKey("user.id", ondelete="CASCADE")' in source
+
+
+def test_alembic_environment_does_not_load_runtime_auth_configuration() -> None:
+    api_root = Path(__file__).parents[2]
+    source = (api_root / "migrations" / "env.py").read_text()
+
+    assert "get_learnhouse_config" not in source
+    assert 'os.environ.get("LEARNHOUSE_SQL_CONNECTION_STRING")' in source
