@@ -353,6 +353,8 @@ describe('Trellis Academy shell', () => {
     expect(nextConfig).not.toContain("'learnhouse-production'")
     expect(nextConfig).toContain('TRELLIS_ACADEMY_RELEASE_SHA')
     expect(nextConfig).toContain('NEXT_PUBLIC_LEARNHOUSE_MEDIA_URL')
+    expect(nextConfig).toContain("path.join(publicDir, 'runtime-config.js')")
+    expect(nextConfig).not.toContain("process.env.NODE_ENV === 'development'")
     expect(runtimeConfig).not.toContain("require('fs')")
     expect(runtimeConfig).not.toContain('runtime-config.json')
     expect(sentrySources).not.toContain("require(\"fs\")")
