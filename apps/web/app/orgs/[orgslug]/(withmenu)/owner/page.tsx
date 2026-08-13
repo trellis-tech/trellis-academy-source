@@ -80,7 +80,7 @@ export default async function AcademyOwnerPage() {
             </div>
             <span className="inline-flex min-h-8 items-center gap-2 rounded-md border border-border bg-card px-3 text-xs font-medium text-foreground">
               <CheckCircle aria-hidden="true" className="text-academy-accent" size={16} weight="fill" />
-              Draft only
+              Platform ready
             </span>
           </div>
 
@@ -102,9 +102,9 @@ export default async function AcademyOwnerPage() {
 
         <section className="grid gap-5 border-b border-border pb-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <h2 className="text-lg font-medium">Content comes last</h2>
+            <h2 className="text-lg font-medium">Ready for curriculum</h2>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
-              Course, module, lesson, video, and translation work remains locked until identity, publishing, recovery, deployment, and authenticated E2E gates are green.
+              Identity, publishing, recovery, deployment, and authenticated E2E gates are green. Curriculum is the next reviewed phase.
             </p>
           </div>
           <a

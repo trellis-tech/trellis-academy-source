@@ -136,7 +136,11 @@ Corresponding source follows `SOURCE_RELEASE.md`. Backup, restore, rollback,
 and corresponding source require release receipts at the exact reviewed head;
 written procedures alone do not satisfy these gates.
 
-Current recovery status: the procedures and provider topology are documented,
-but a production-shaped backup/restore rehearsal, immutable rollback rehearsal,
-and public corresponding-source readback remain required evidence. The Academy
-platform goal stays open until those receipts exist.
+Current recovery status (verified 2026-08-13): the isolated database restore
+receipt is retained at `trellis/evidence/2026-08-12-database-restore.json`;
+the production release records immutable Fly and Vercel rollback targets; and
+the public corresponding-source archive is independently checksum-verified.
+Release `9717e17b862375d17419af7b5ab9efe65c3d7d44` passed the fresh-checkout
+journey, recovery gates, migration and storage checks, compensated promotion,
+publication readback, and Michel-only authenticated production replay.
+Curriculum remains the next phase.

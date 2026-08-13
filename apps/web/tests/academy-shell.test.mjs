@@ -180,6 +180,9 @@ describe('Trellis Academy shell', () => {
     expect(page).toContain('hasAcademyRefreshSession')
     expect(page).toContain('/api/auth/refresh?destination=')
     expect(page).toContain("academy_role !== 'owner'")
+    expect(page).toContain('Platform ready')
+    expect(page).toContain('Curriculum is the next reviewed phase.')
+    expect(page).not.toContain('Content comes last')
     expect(page).toContain('Publishing workspace')
     expect(page).toContain('Repository source')
     expect(page).not.toContain('is_superadmin')
@@ -214,6 +217,7 @@ describe('Trellis Academy shell', () => {
   })
 
   test('keeps progress and certificates read-only and Trellis styled', () => {
+    const progressPage = readSource('../app/orgs/[orgslug]/(withmenu)/trail/page.tsx')
     const progress = readSource('../app/orgs/[orgslug]/(withmenu)/trail/trail.tsx')
     const progressCard = readSource('../components/Pages/Trail/TrailCourseCard.tsx')
     const certificates = readSource('../components/Pages/Trail/UserCertificates.tsx')
@@ -225,6 +229,8 @@ describe('Trellis Academy shell', () => {
     expect(sources).not.toContain('nice-shadow')
     expect(sources).not.toContain('lucide-react')
     expect(sources).toContain('@phosphor-icons/react')
+    expect(progressPage).toContain('getAcademyServerSession')
+    expect(progressPage).toContain("redirect('/login?next=%2Ftrail')")
   })
 
   test('verifies credentials in the Trellis Academy shell', () => {

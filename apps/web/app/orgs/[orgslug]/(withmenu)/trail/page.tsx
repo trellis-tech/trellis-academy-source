@@ -1,5 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { redirect } from 'next/navigation'
+import { getAcademyServerSession, hasAcademyRefreshSession } from '@/lib/auth/server'
 import { getOrganizationContextInfo } from '@services/organizations/orgs'
 import Trail from './trail'
 
@@ -25,6 +27,13 @@ export async function generateMetadata(props: MetadataProps): Promise<Metadata> 
 
 const TrailPage = async (params: any) => {
   let orgslug = (await params.params).orgslug
+  const session = await getAcademyServerSession()
+  if (!session) {
+    if (await hasAcademyRefreshSession()) {
+      redirect('/api/auth/refresh?destination=%2Ftrail')
+    }
+    redirect('/login?next=%2Ftrail')
+  }
 
   return (
     <div>

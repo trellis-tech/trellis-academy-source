@@ -65,6 +65,19 @@ organization-wide credential.
 Health proves routing and process availability only. Do not declare release
 success without the authenticated replay.
 
+## Verified pre-curriculum release baseline
+
+Release `9717e17b862375d17419af7b5ab9efe65c3d7d44` completed the production
+workflow on 2026-08-13. Its retained release artifact records migration head
+`u4v5w6x7y8z9`, the immutable Fly image, SHA-bound Vercel deployment, public
+corresponding-source URL, publication tag and digest, predecessor rollback
+target, and restore-verification timestamp.
+
+The authenticated replay proved `michel@trellistech.com` as Academy owner,
+owner workspace access, explicit logout, returning Trellis SSO, synthetic
+course start, saved quiz answer, server-verified 100/100 grading, and durable
+100% progress after refresh. Real curriculum was not created.
+
 ## Backup and isolated restore rehearsal
 
 Before the first content-bearing production release, and after material schema

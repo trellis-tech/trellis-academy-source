@@ -1072,7 +1072,7 @@ aa80706852899879d073f4bede067cf2c3bc80b831d16f7d0b521e954a04f8e5  apps/web/app/o
 b1022a7f3b99433fd38aefdaa12b08e2a125ed6f76d9d1bf4e101a281d384858  apps/web/app/orgs/[orgslug]/(withmenu)/library/LibraryClient.tsx
 023353692636b5231553da04046c28a9863193903ca3eca1c2ed2233fecd1d95  apps/web/app/orgs/[orgslug]/(withmenu)/library/page.tsx
 7af1180f701321cbf0557a3b3ff7d312d77710e9fc97a5aa8a3cd115e63c187e  apps/web/app/orgs/[orgslug]/(withmenu)/loading.tsx
-7c7308e0ecb7a300baf5f302a2f778a30dd0ad4381d74a361e9ed890a8ccd406  apps/web/app/orgs/[orgslug]/(withmenu)/owner/page.tsx
+5760685b5c8299b17c959fdc60c0bf9549ec3cc0d8773b2b04bdf350d616d622  apps/web/app/orgs/[orgslug]/(withmenu)/owner/page.tsx
 05300cdefc5f84af1df01ba9267f106f218bed3cece6294754a47dc62127a6b8  apps/web/app/orgs/[orgslug]/(withmenu)/page.tsx
 c9b5c3ef081b68280ce7a861e808267d7dd5bec3235740eb412e7d2e46a97864  apps/web/app/orgs/[orgslug]/(withmenu)/playground/[playgrounduuid]/view.tsx
 6add84f54025b3705d7bf720061afe659a35ffaac8e23918ffe89bf3ac98531b  apps/web/app/orgs/[orgslug]/(withmenu)/playgrounds/playgrounds.tsx
@@ -1082,7 +1082,7 @@ c9b5c3ef081b68280ce7a861e808267d7dd5bec3235740eb412e7d2e46a97864  apps/web/app/o
 539a70ac31a3e8b8d61b988fc2dc5c016286ec736f10db047d266c1819960f0d  apps/web/app/orgs/[orgslug]/(withmenu)/store/offers/[offerid]/offer-detail.tsx
 b3766032d9acc2013dd86ede412f2205dc870bcb5d0831f79d541829dbcf4ea2  apps/web/app/orgs/[orgslug]/(withmenu)/store/store.tsx
 7af1180f701321cbf0557a3b3ff7d312d77710e9fc97a5aa8a3cd115e63c187e  apps/web/app/orgs/[orgslug]/(withmenu)/trail/loading.tsx
-751c27d8ad77bc07453cd0752cf98f9cb6167adf5e0463aacb31769635c7c69f  apps/web/app/orgs/[orgslug]/(withmenu)/trail/page.tsx
+e656ed0a82a0b3fafac2d8a5cf454d20c312799989efcfcb47eef89a30e2e071  apps/web/app/orgs/[orgslug]/(withmenu)/trail/page.tsx
 a81961e82e2292961bb52bdc0baca3a7e954aaecf51e1bc35143fe24cd3b9618  apps/web/app/orgs/[orgslug]/(withmenu)/trail/trail.tsx
 31c4579292e53cd1245205400af85b457150427ebffeef4a0be335773024fafe  apps/web/app/orgs/[orgslug]/(withmenu)/user/[username]/UserProfileClient.tsx
 375a65efe6b7f6a58cfa74e2f4c6215b974c627cc65defda204ecfcedcc7d512  apps/web/app/orgs/[orgslug]/dash/analytics/loading.tsx
@@ -1887,7 +1887,7 @@ c16d1caf316d94ce9ca2b5f4094eb1ff80b1a422fcbb08b26868c1fa3ca98c6b  apps/web/servi
 13546d9e95c165480e199bec2af30dafb0ec34946c72d4e53b6f451cd8fd1a3c  apps/web/services/utils/ts/requests.ts
 ed4e9e66ed24e464a67daadfe497436bba114036921451e19a5cd9cce24c3d28  apps/web/services/webhooks/webhooks.ts
 2ab2aa3c4c57377ba72ccb0bad11fd8c3427eb72b77ce706914df948748067fb  apps/web/styles/globals.css
-3a975479bd9e004fe3f473ce81e5c59a7bb2c5db3d8f531b1239ae1aa368c6ab  apps/web/tests/academy-shell.test.mjs
+873d9b2176afeaa436e0dd02068c6f7ee67145c8be670f6570ee9c8598e12277  apps/web/tests/academy-shell.test.mjs
 c7bc0c7030cdff5eec0dc0c59bc559a871b4c8422db513bc5b83e2fbf770afd1  apps/web/tests/active-user-billing.test.mjs
 1181a585107c1898771e8e404fcdfa53d54a6e2a69240876d85224e8286a170e  apps/web/tests/admin-ee-gate.test.mjs
 710ca36edeba0d08f75734442758738d56c26afec0685b4763405d54bd405da9  apps/web/tests/api-response-shape.test.mjs
